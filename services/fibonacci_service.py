@@ -34,6 +34,7 @@ from lib import fibonacci
 from xml.dom.minidom import getDOMImplementation
 
 @bottle.route('/fib')
+@bottle.route('/fib/')
 def redirect_to_fib_series():
     bottle.redirect('/fib/1')
 
