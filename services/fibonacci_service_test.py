@@ -12,15 +12,10 @@ class TestFibonacci(unittest.TestCase):
     def tearDown(self):
         pass #stop the server
 
-    def test_fibonacci_series(self):
-        """test just the fibonacci series generator"""
-        self.assertEqual(list(fibonacci.series(3)),
-                         [0, 1, 1, 2])
-
     def test_fibonacci_service(self):
         """test to limit provided in given sample output"""
-        expected = '<fibonacci><value index="0">0</value><value index="1">1</value><value index="2">1</value><value index="3">2</value></fibonacci>' 
-        actual   = fibonacci_document(3)
+        expected = '<?xml version="1.0" ?><fibonacci><value index="0">0</value><value index="1">1</value><value index="2">1</value><value index="3">2</value></fibonacci>' 
+        actual   = fibonacci_document(4)
         self.assertEqual(expected, actual)
 
 if __name__ == '__main__':
