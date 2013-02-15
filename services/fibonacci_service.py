@@ -75,4 +75,4 @@ def fibonacci_document(limit):
     return fib_xml.toxml()
 
 if __name__ == '__main__':
-    bottle.run(debug=True)
+    bottle.run()
