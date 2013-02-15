@@ -57,3 +57,4 @@ Improvements
 - JSON-centric configuration and better logging.
 - `lxml` for anything other than simple xml file creation/parsing.
 - A "run one and done" test suite (ala `unittest discover`). 
+- Memoizing/pickling the fibonacci sequence to memory for large numbers.
