@@ -47,7 +47,8 @@ def fibonacci_document(limit):
         limit = -1
 
     impl = getDOMImplementation()
-
+    bottle.response.content_type = "application/xml"
+    
     if limit < 0:
         error_xml  = impl.createDocument(None, "error", None)
         error_elem = error_xml.documentElement
@@ -71,7 +72,6 @@ def fibonacci_document(limit):
         fib_value = fib_xml.createTextNode(str(n))
         value.appendChild(fib_value)
     
-    bottle.response.content_type = "application/xml"
     return fib_xml.toxml()
 
 if __name__ == '__main__':
